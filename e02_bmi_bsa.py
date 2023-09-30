@@ -7,9 +7,6 @@
 # import math library
 import math
 
-# import BMI Class
-import BMI
-
 # Ask user for weight
 userWeight = int(input("Insert your weight (in Kg): "))
 
