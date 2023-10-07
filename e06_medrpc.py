@@ -1,69 +1,74 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-#Created on Sat Sep 30 17:05:45 2023
+# Created on Sat Sep 30 17:05:45 2023
 
-#@author: andreasurben
+# @author: Andreas Urben
 
 # SINGLE ROUND ROCK PAPER SCISSORS
 
 # import random
 import random
 
+
 # convert user input values
-def formachine(val):
+def for_machine(val):
     res = 0
-    if userInput == "Pill":
+    if val == "Pill":
         res = 1
-    if userInput == "Scalpel":
+    elif val == "Scalpel":
         res = 2
-    if userInput == "Prescription":
+    elif val == "Prescription":
         res = 3
     return int(res)
-        
+
+
 # convert machine values
 def readable(val):
     res = 0
-    if computer == 1:
+    if val == 1:
         res = "Pill"
-    if computer == 2:
+    elif val == 2:
         res = "Scalpel"
-    if computer == 3:
+    elif val == 3:
         res = "Prescription"
     return res
+
 
 print("Welcome to the Medical Rock, Paper, Scissors Game!")
 print("Rules: Pill crushes Scalpel, Scalpel cuts Prescription, Prescription covers Pill.")
 
-userInput = input("Choose Pill, Scalpel or Prescription: ")
+user_input = input("Choose Pill, Scalpel or Prescription: ")
 
 # Print empty line
 print()
 
-computer = random.randint(1,3)
-userInput = formachine(userInput)
-    
-print("Computer chose", readable(computer))
+computer_input = random.randint(1, 3)
+user_input = for_machine(user_input)
 
-if computer == userInput:
+print(f"Computer chose {readable(computer_input)}")
+
+winner = "Undefined"
+
+if computer_input == user_input:
     winner = "We have a tie!"
 
-if computer == 1 and userInput == 3:
+# Case where player wins
+elif computer_input == 1 and user_input == 3:
     winner = "You win!"
-    
-if computer == 2 and userInput == 1:
+elif computer_input == 2 and user_input == 1:
+    winner = "You win!"
+elif computer_input == 3 and user_input == 2:
     winner = "You win!"
 
-if computer == 3 and userInput == 2:
-    winner = "You win!"
+# Cases where Computer wins
+elif computer_input == 1 and user_input == 2:
+    winner = "Computer wins!"
 
-if computer == 1 and userInput == 2:
+elif computer_input == 2 and user_input == 3:
     winner = "Computer wins!"
-    
-if computer == 2 and userInput == 3:
+
+elif computer_input == 3 and user_input == 1:
     winner = "Computer wins!"
-    
-if computer == 3 and userInput == 1:
-    winner = "Computer wins!"
-    
+
 print(winner)

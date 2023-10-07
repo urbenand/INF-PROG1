@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-#Created on Sat Sep 30 12:21:34 2023
-#@author: andreasurben
+# Created on Sat Sep 30 12:21:34 2023
+# @author: Andreas Urben
 
 # import math library
 import math
