@@ -42,7 +42,7 @@ win_computer = 0
 # define Round Number
 roundNo = 1
 # define max rounds
-max_round = 3
+max_round = int(input("Enter the amount of needed wins: "))
 
 print("Welcome to the three round Medical Rock, Paper, Scissors Game!")
 print("Rules: Pill crushes Scalpel, Scalpel cuts Prescription, Prescription covers Pill.")
