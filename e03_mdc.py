@@ -23,6 +23,6 @@ requiredCapsules = int(totalDosage / capsuleSize)
 deficit = float(totalDosage - (requiredCapsules * capsuleSize))
 
 # Output values
-print("The total dosage of the medicine the patient should take is:", totalDosage,"mg") #4750.0 mg
+print("The total dosage of the medicine the patient should take is:", totalDosage,"mg") # 4750.0 mg
 print("The number of complete capsules of medicine required is:", requiredCapsules, "Capsules") # 47.0
 print("The deficit in the prescribed medicine is: ", deficit,"mg") # 50.0 mg
