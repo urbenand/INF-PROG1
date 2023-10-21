@@ -11,7 +11,7 @@ def mandelbrot(c, max_iterations):
    return n
 
 # Einstellungen für das Fraktal
-width, height = 400, 400
+width, height = 200, 200
 x_min, x_max = -3.0, 1.0
 y_min, y_max = -2.0, 2.0
 max_iterations = 256
