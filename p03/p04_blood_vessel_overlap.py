@@ -14,5 +14,9 @@ blood_vessels = {
     10: [5, 5, 8, 2]
 }
 
-for x in blood_vessels.values():
-    print(x)
+# X axis
+for x in range(10):
+
+    # Y axis
+    for y in range(10):
+        print(f"{x},{y}")
