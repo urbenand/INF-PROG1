@@ -48,8 +48,6 @@ for [x1,y1,x2,y2] in blood_vessels:
                 # update grid[y][x]
                 grid[x][y] += 1
 
-visualize_grid(grid)
-
 # count overlaps
 overlap_count = 0
 
@@ -58,6 +56,7 @@ for row in grid:
         if column >= 2:
             overlap_count += 1
 
-print(f"There are {overlap_count} overlapping blood vessels")
+print(f"There are {overlap_count} points, where at least two blood vessels are overlapping.🤓")
 
+visualize_grid(grid)
 
