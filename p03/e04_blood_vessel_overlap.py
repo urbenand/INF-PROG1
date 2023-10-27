@@ -49,3 +49,15 @@ for [x1,y1,x2,y2] in blood_vessels:
                 grid[x][y] += 1
 
 visualize_grid(grid)
+
+# count overlaps
+overlap_count = 0
+
+for row in grid:
+    for column in row:
+        if column >= 2:
+            overlap_count += 1
+
+print(f"There are {overlap_count} overlapping blood vessels")
+
+
