@@ -27,6 +27,7 @@ blood_vessels = [
 
 # create list for sub points
 sub_points = []
+diagonal_vessels = []
 
 for [x1,y1,x2,y2] in blood_vessels:
 
@@ -47,6 +48,18 @@ for [x1,y1,x2,y2] in blood_vessels:
 
                 # update grid[y][x]
                 grid[x][y] += 1
+    else:
+        diagonal_vessels.append([x1,y1,x2,y2])
+
+# add diagonal vessels to grid
+for [x1,y1,x2,y2] in diagonal_vessels:
+    print([x1,y1,x2,y2])
+    # ascending /
+    if x1 > x2:
+
+    # descending \
+    else:
+
 
 # count overlaps
 overlap_count = 0
